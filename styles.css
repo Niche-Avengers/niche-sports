@@ -1,0 +1,213 @@
+/* =========================================================
+   styles.css: Niche Sports Programming and Network
+   One stylesheet for every page (Module 4: external CSS)
+   ========================================================= */
+
+/* ---------- Whole page (Module 4: element selector) ---------- */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;          /* rem = relative to the root font size */
+  line-height: 1.6;         /* comfortable spacing between lines */
+  color: #17364a;           /* dark text on a light background = good contrast */
+  background-color: #f4f6f8;
+}
+
+/* ---------- Page container (Module 5: layout starts with the container) ---------- */
+.page {
+  box-sizing: border-box;   /* padding counts inside the width */
+  width: 90%;               /* leaves room on small screens */
+  max-width: 60rem;         /* stops lines getting too long on big screens */
+  margin: 0 auto;           /* auto left/right margins center the box */
+  padding: 1rem;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #0b304a;
+  color: #ffffff;
+}
+
+/* Logo and title side by side (Module 5: Flexbox) */
+.header-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* ---------- Nav (Module 4: descendant selector, inline-block, hover) ---------- */
+nav {
+  background-color: #12466b;
+}
+
+/* "nav a" = only the links inside the nav */
+nav a {
+  display: inline-block;    /* inline, but accepts padding like a box */
+  padding: 0.6rem 1rem;
+  margin-right: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background-color: #2b6f9e;
+}
+
+/* ID selector: marks the page you're on (Module 4) */
+#current-page {
+  background-color: #2b6f9e;
+}
+
+/* ---------- Headings ---------- */
+h2 {
+  color: #0b304a;
+  font-size: 1.5rem;
+}
+
+/* ---------- Images (Module 5: flexible sizing) ---------- */
+img {
+  max-width: 100%;          /* never wider than its box */
+  height: auto;             /* keeps the shape, no stretching */
+}
+
+figure {
+  margin: 0;
+}
+
+/* ---------- Welcome section (box model: padding, border, margin) ---------- */
+.welcome {
+  background-color: #ffffff;
+  border: 1px solid #c9d3db;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Sport cards (Module 5: Flexbox) ---------- */
+/* display: flex goes on the PARENT; its children become flex items */
+.content-row {
+  display: flex;
+  flex-wrap: wrap;          /* cards move to a new line on narrow screens */
+  gap: 1rem;                /* space between the cards */
+}
+
+/* Class selector: styles all three cards the same way */
+.sport {
+  flex: 1 1 16rem;          /* grow, shrink, start around 16rem wide */
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-top: 6px solid #0b304a;   /* each sport replaces this color below */
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.sport h3 {
+  margin: 0.5rem 0;
+}
+
+/* Links inside the cards */
+.sport a {
+  color: #0b304a;
+}
+
+.sport a:hover {
+  color: #2b6f9e;
+}
+
+/* One accent color per sport (a second class on each card) */
+.pickleball {
+  border-top-color: #2e7d4f;
+}
+
+.tag {
+  border-top-color: #b8560f;
+}
+
+.power-slap {
+  border-top-color: #8e1b2c;
+}
+
+/* ---------- Guide ---------- */
+.guide {
+  background-color: #ffffff;
+  border: 1px solid #c9d3db;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.guide h2 {
+  color: #0b304a;
+  font-size: 1.5rem;
+}
+
+/* ---------- Filter form ---------- */
+.filter-form {
+  background-color: #ffffff;
+  border: 1px solid #c9d3db;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.filter-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.filter-form select {
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+
+/* ---------- News note ---------- */
+.news-fallback {
+  color: #5a6b78;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* ---------- Table wrappers ---------- */
+.table-wrap {
+  background-color: #ffffff;
+  border: 1px solid #c9d3db;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.data-table th,
+.data-table td {
+  border: 1px solid #dee2e6;
+  padding: 0.5rem;
+  text-align: left;
+}
+.data-table th {
+  background-color: #0b304a;
+  color: #ffffff;
+}
+.data-table td {
+  background-color: #f8f9fa;
+}
+
+/* ---------- Focus outline ---------- */
+*:focus-visible {
+  outline: 3px solid #2b6f9e;
+  outline-offset: 2px;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}

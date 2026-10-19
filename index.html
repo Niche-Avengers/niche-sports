@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Niche Sports Programming and Network</title>
+
+  <!-- Module 4: external stylesheet, linked in the head -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Module 6: external script; defer runs it after the HTML is read -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER: copied onto every page (Module 3/5 semantic tags) -->
+  <header>
+    <div class="page header-row">
+      <img src="logos/logo.svg" alt="Niche Sports Programming and Network logo" class="logo">
+      <h1>Niche Sports Programming and Network</h1>
+    </div>
+  </header>
+
+  <!-- NAV: copied onto every page. Game Day and About don't exist yet. -->
+  <nav aria-label="Main navigation">
+    <div class="page">
+      <a href="index.html" id="current-page" aria-current="page">Home</a>
+      <a href="gameday.php">Game Day</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <!-- Module 5: .page container keeps lines readable and centers the content -->
+  <main class="page">
+
+    <!-- WELCOME -->
+    <section class="welcome">
+      <figure>
+        <img src="images/banner.svg" alt="Placeholder banner image">
+      </figure>
+      <h2>Your home for niche sports</h2>
+      <p>
+        News, stats and beginner guides for Pickleball, Tag and Power Slap,
+        all in one place.
+      </p>
+    </section>
+
+    <!-- SPORT CARDS: Module 5 Flexbox. The parent div gets display: flex. -->
+    <h2>Our sports</h2>
+    <div class="content-row">
+
+      <!-- One class (.sport) styles all three cards; one extra class sets each accent color -->
+      <section class="sport pickleball">
+        <img src="images/pickleball.svg" alt="Pickleball illustration">
+        <h3>Pickleball</h3>
+        <p>
+          A paddle sport that mixes tennis, badminton and ping-pong.
+          It is played on a small court, in singles or doubles.
+        </p>
+        <a href="https://www.ppatour.com" target="_blank">Where to watch: PPA Tour</a>
+      </section>
+
+      <section class="sport tag">
+        <img src="images/tag.svg" alt="Tag illustration">
+        <h3>Tag</h3>
+        <p>
+          The playground game turned pro. One chaser, one evader,
+          and a short time limit on an obstacle course.
+        </p>
+        <a href="https://www.worldchasetag.com" target="_blank">Where to watch: World Chase Tag</a>
+      </section>
+
+      <section class="sport power-slap">
+        <img src="images/power-slap.svg" alt="Power Slap illustration">
+        <h3>Power Slap</h3>
+        <p>
+          A striking competition where two athletes take turns
+          slapping each other, with judges scoring each match.
+        </p>
+        <a href="https://www.powerslap.com" target="_blank">Where to watch: Power Slap</a>
+      </section>
+
+    </div>
+
+    <!-- LATEST NEWS: the one JavaScript interaction (Modules 6 and 7) -->
+    <section class="news">
+      <h2>Latest news</h2>
+
+      <!-- Module 5: the label's "for" matches the select's id -->
+      <label for="sport-choice">Show news for:</label>
+      <select id="sport-choice" name="sport-choice">
+        <option value="all">All sports</option>
+        <option value="pickleball">Pickleball</option>
+        <option value="tag">Tag</option>
+        <option value="power-slap">Power Slap</option>
+      </select>
+
+      <!-- Module 6: noscript shows a message when JavaScript is disabled -->
+      <noscript>
+        <p class="news-fallback">News is loaded with JavaScript. Please enable JavaScript to see our latest articles.</p>
+      </noscript>
+      <p class="news-fallback">Note: these articles are manually selected and do not update automatically.</p>
+      <p id="news-count"></p>
+      <ul id="news-list"></ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: copied onto every page -->
+  <footer>
+    <div class="page">
+      <p>Group 2: Efrain Suarez, Sebastian Martinez Cruz, Alexander Garcia Salazar, Patrick Rodriguez</p>
+      <p>IST 4310 Web Technologies &middot; Last updated: October 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>

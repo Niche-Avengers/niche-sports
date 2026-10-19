@@ -1,6 +1,11 @@
 Niche Sports Programming and Network - Group 2
 Updated October 2026
 
+GET THE CODE FROM GITHUB
+1. Open VS Code.
+2. Clone the repository: git clone https://github.com/Niche-Avengers/niche-sports.git
+3. Open the cloned niche-sports folder in VS Code.
+
 RUN THE WEBSITE
 1. Extract the complete niche-sports folder and open it in VS Code.
 2. PHP must be installed and available in the terminal; VS Code does not install it.

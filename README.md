@@ -48,6 +48,7 @@ Home and About are plain HTML pages. Game Day is PHP and has to run through a PH
 - `app.js` - The news filter on the Home page.
 - `images/` - The NSPN logos, sport photos and the original SVG artwork.
 - `logos/` - The site logo and mascot artwork.
+- `PROGRESS.md` - Step-by-step progress log: what we built, changed, improved and plan next.
 - `NOTES.md` - What we changed and why, in short form.
 - `PROJECT_README.txt` - Setup, change summary and data/source notes.
 

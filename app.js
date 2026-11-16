@@ -75,3 +75,89 @@ const gameDayLink = document.querySelector('nav a[href="gameday.php"]');
 if (gameDayLink && window.location.protocol === "file:") {
   gameDayLink.href = "http://localhost:8001/gameday.php";
 }
+
+// ---------- Accessibility options (every page) ----------
+// The Accessibility button opens a pop-up (<dialog>) with two tick boxes.
+// Each tick box adds or removes one class on the <html> element,
+// and styles.css does the rest (see "Accessibility options" there).
+// Choices are saved in localStorage so they stay on every page.
+const a11yDialog = document.querySelector("#a11y-dialog");
+const a11yOpen = document.querySelector("#a11y-open");
+const colorblindBox = document.querySelector("#colorblind-toggle");
+const textBox = document.querySelector("#text-toggle");
+const a11ySave = document.querySelector("#a11y-save");
+const a11ySkip = document.querySelector("#a11y-skip");
+
+// Read or save one setting. If the browser blocks storage,
+// the options still work, but only for the current page.
+function loadSetting(name) {
+  try {
+    return localStorage.getItem(name);
+  } catch (error) {
+    return null;
+  }
+}
+
+function saveSetting(name, value) {
+  try {
+    localStorage.setItem(name, value);
+  } catch (error) {
+    console.log("Settings cannot be saved in this browser.");
+  }
+}
+
+// Turn the options on or off to match the tick boxes
+function applyOptions() {
+  document.documentElement.classList.toggle("colorblind", colorblindBox.checked);
+  document.documentElement.classList.toggle("large-text", textBox.checked);
+}
+
+// Put the tick boxes back to the saved choices
+function restoreSaved() {
+  colorblindBox.checked = loadSetting("colorblind") === "on";
+  textBox.checked = loadSetting("large-text") === "on";
+  applyOptions();
+}
+
+if (a11yDialog && a11yOpen && colorblindBox && textBox && a11ySave && a11ySkip) {
+  // Start with the choices saved from an earlier visit
+  restoreSaved();
+
+  // Ticking a box shows the change right away
+  colorblindBox.addEventListener("change", applyOptions);
+  textBox.addEventListener("change", applyOptions);
+
+  a11yOpen.addEventListener("click", function () {
+    a11yDialog.showModal();
+  });
+
+  // Save: keep the ticked options
+  a11ySave.addEventListener("click", function () {
+    saveSetting("colorblind", colorblindBox.checked ? "on" : "off");
+    saveSetting("large-text", textBox.checked ? "on" : "off");
+    saveSetting("a11y-asked", "yes");
+    a11yDialog.close();
+  });
+
+  // No thanks: turn everything off
+  a11ySkip.addEventListener("click", function () {
+    colorblindBox.checked = false;
+    textBox.checked = false;
+    applyOptions();
+    saveSetting("colorblind", "off");
+    saveSetting("large-text", "off");
+    saveSetting("a11y-asked", "yes");
+    a11yDialog.close();
+  });
+
+  // Esc key: close without saving, so go back to the saved choices
+  a11yDialog.addEventListener("cancel", function () {
+    restoreSaved();
+    saveSetting("a11y-asked", "yes");
+  });
+
+  // First visit: ask the visitor once
+  if (loadSetting("a11y-asked") === null) {
+    a11yDialog.showModal();
+  }
+}

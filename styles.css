@@ -319,3 +319,208 @@ button:focus-visible,
   color: #f2ea0c;
   font-weight: bold;
 }
+
+/* =========================================================
+   Accessibility options (button and pop-up on every page)
+   app.js adds a class to the <html> element:
+   "large-text" and/or "colorblind"
+   ========================================================= */
+
+/* Small button at the right end of the header row */
+.a11y-open {
+  margin-left: auto;        /* pushes the button to the right */
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.35rem 0.9rem;
+  background-color: #f2ea0c;
+  color: #000000;
+  border: 2px solid #f2ea0c;
+  border-radius: 999px;     /* pill shape */
+  cursor: pointer;
+}
+
+.a11y-open:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* ---------- The pop-up (Module 4: element and ID selectors) ---------- */
+/* Light cream box with black text: the highest contrast on the site */
+#a11y-dialog {
+  box-sizing: border-box;
+  width: calc(100% - 2rem);
+  max-width: 30rem;
+  padding: 1.5rem;
+  background-color: #ece8cb;
+  color: #000000;
+  border: 4px solid #f2ea0c;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+/* Darkens the page behind the pop-up */
+#a11y-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#a11y-dialog h2 {
+  margin-top: 0;
+  color: #000000;
+}
+
+/* Each option is one big clickable box */
+.a11y-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.a11y-option input {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0.1rem 0 0;
+  flex-shrink: 0;
+  accent-color: #0b3d24;    /* color of the tick box when checked */
+}
+
+.a11y-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.a11y-actions button {
+  font: inherit;
+  font-weight: bold;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.a11y-save {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.a11y-skip {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.a11y-actions button:hover {
+  background-color: #f2ea0c;
+  color: #000000;
+}
+
+/* Black focus outline: yellow would be hard to see on cream */
+#a11y-dialog input:focus-visible,
+#a11y-dialog button:focus-visible {
+  outline: 3px solid #000000;
+  outline-offset: 3px;
+}
+
+/* ---------- Larger text ---------- */
+/* Every size in this file uses rem, and rem is based on the
+   <html> font size, so this one rule makes all text bigger. */
+html.large-text {
+  font-size: 125%;
+}
+
+/* ---------- Colorblind mode ---------- */
+/* Green and yellow are hard to tell apart for many colorblind
+   visitors. This mode swaps them for sky blue and orange, which
+   most people can tell apart, and underlines links so they never
+   depend on color alone. */
+html.colorblind nav {
+  background-color: #0d2b45;
+  border-color: #56b4e9;
+}
+
+html.colorblind nav a:hover {
+  background-color: #1a4d7a;
+}
+
+html.colorblind #current-page {
+  background-color: #56b4e9;
+  color: #000000;
+  text-decoration: underline;
+}
+
+html.colorblind h2 {
+  color: #56b4e9;
+}
+
+html.colorblind a,
+html.colorblind .sport a,
+html.colorblind #news-list a {
+  color: #56b4e9;
+  text-decoration: underline;
+}
+
+html.colorblind a:hover,
+html.colorblind .sport a:hover,
+html.colorblind #news-list a:hover {
+  color: #e69f00;
+}
+
+html.colorblind .welcome,
+html.colorblind .news,
+html.colorblind .guide {
+  border-color: #2c4a66;
+}
+
+html.colorblind .pickleball {
+  border-top-color: #e69f00;
+}
+
+html.colorblind .tag {
+  border-top-color: #56b4e9;
+}
+
+html.colorblind footer {
+  border-top-color: #56b4e9;
+}
+
+html.colorblind .news select,
+html.colorblind .filter-form select {
+  border-color: #56b4e9;
+}
+
+html.colorblind .filter-form button {
+  background-color: #56b4e9;
+  border-color: #56b4e9;
+}
+
+html.colorblind .filter-form button:hover {
+  background-color: #e69f00;
+  border-color: #e69f00;
+}
+
+html.colorblind .data-table th,
+html.colorblind .data-table td {
+  border-color: #2c4a66;
+}
+
+html.colorblind .data-table thead {
+  background-color: #0d2b45;
+}
+
+html.colorblind .notice {
+  color: #e69f00;
+}
+
+html.colorblind a:focus-visible,
+html.colorblind select:focus-visible,
+html.colorblind button:focus-visible,
+html.colorblind .table-wrap:focus-visible {
+  outline-color: #e69f00;
+}

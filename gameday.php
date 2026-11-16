@@ -76,14 +76,36 @@ $players = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game Day | Niche Sports Programming and Network</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <header>
     <div class="page header-row">
       <img src="images/nspn-worm-logo.png" alt="NSPN neon green logo with worm mascot" class="logo" width="2048" height="768">
       <h1>Niche Sports Programming and Network</h1>
+      <!-- Opens the accessibility pop-up (app.js) -->
+      <button type="button" id="a11y-open" class="a11y-open" aria-haspopup="dialog">Accessibility</button>
     </div>
   </header>
+
+  <!-- Accessibility pop-up: a <dialog> box that app.js opens.
+       It opens by itself on a visitor's first visit. -->
+  <dialog id="a11y-dialog" aria-labelledby="a11y-title">
+    <h2 id="a11y-title">Accessibility options</h2>
+    <p>Would you like to turn on accessibility mode? You can change this any time with the Accessibility button at the top of the page.</p>
+    <label class="a11y-option">
+      <input type="checkbox" id="colorblind-toggle">
+      <span><strong>Colorblind mode</strong><br>Blue and orange instead of green and yellow, with underlined links.</span>
+    </label>
+    <label class="a11y-option">
+      <input type="checkbox" id="text-toggle">
+      <span><strong>Larger text</strong><br>Makes all text on the site bigger.</span>
+    </label>
+    <div class="a11y-actions">
+      <button type="button" id="a11y-save" class="a11y-save">Save</button>
+      <button type="button" id="a11y-skip" class="a11y-skip">No thanks</button>
+    </div>
+  </dialog>
 
   <nav aria-label="Main navigation">
     <div class="page">

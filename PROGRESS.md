@@ -67,6 +67,21 @@ PHP and JavaScript behavior did not change.
 - Committed and pushed all work from Stages 4 and 5 so the repository is up to date for the whole group.
 - Added this progress log.
 
+## Stage 7 — Accessibility options (November 16, 2026)
+
+**What we added**
+- A yellow **Accessibility** button in the header of every page.
+- An accessibility pop-up (a `<dialog>` box) that asks first-time visitors whether they want accessibility mode on. It has two options:
+  - **Colorblind mode**: swaps neon green and yellow for sky blue and orange, which most colorblind visitors can tell apart, and underlines links.
+  - **Larger text**: makes all text on the site 25% bigger.
+- Choices are saved in the browser (`localStorage`), so they stay on across Home, Game Day and About.
+
+**What we changed**
+- `gameday.php` now loads `app.js`, so the pop-up works on Game Day too.
+- A first version used two large buttons in the header. We replaced them with the pop-up because it looked cleaner and was easier to notice.
+
+**Beyond class material** (explained in code comments): `<dialog>`, `localStorage`, `classList.toggle()` and `try/catch`.
+
 ---
 
 ## Next steps (planned)
@@ -74,10 +89,10 @@ PHP and JavaScript behavior did not change.
 Status key: ⬜ not started · 🟨 in progress · ✅ done
 
 ### Accessibility
-- ⬜ Accessibility controls in the header on every page
-- ⬜ Colorblind mode (high-contrast, colorblind-safe palette)
-- ⬜ Larger text mode
-- ⬜ Remember the visitor's choice in the browser (`localStorage`)
+- ✅ Accessibility controls in the header on every page
+- ✅ Colorblind mode (high-contrast, colorblind-safe palette)
+- ✅ Larger text mode
+- ✅ Remember the visitor's choice in the browser (`localStorage`)
 
 ### Privacy
 - ⬜ Privacy policy page: no tracking cookies, no analytics, no stored personal data

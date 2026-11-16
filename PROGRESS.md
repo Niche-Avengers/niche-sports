@@ -82,6 +82,16 @@ PHP and JavaScript behavior did not change.
 
 **Beyond class material** (explained in code comments): `<dialog>`, `localStorage`, `classList.toggle()` and `try/catch`.
 
+## Stage 8 — Testing evidence (November 16, 2026)
+
+**What we added**
+- `TESTING.md`: 17 tests with input, expected result, observed result and a screenshot for each.
+- `screenshots/`: 17 screenshots covering pages, the news filter, the Game Day form, invalid input, JavaScript turned off, accessibility, keyboard use and phone-width layouts.
+
+**Results**
+- All 17 tests passed, with no JavaScript errors in the console.
+- Found two small fixes for later: the Accessibility button wraps below the title on desktop, and the footer still says October 2026.
+
 ---
 
 ## Next steps (planned)
@@ -105,5 +115,7 @@ Status key: ⬜ not started · 🟨 in progress · ✅ done
 - ⬜ Optional: SQL injection demonstration (vulnerable vs. fixed version, run locally only), with the stages documented
 
 ### Testing and documentation
-- ⬜ Testing screenshots for each feature
-- ⬜ Update `README.md` with the new features and screenshots
+- ✅ Testing screenshots for each feature (`TESTING.md`, `screenshots/`)
+- ⬜ Update `README.md` with the new features, contributions and source credits
+- ⬜ Fix: Accessibility button wraps on desktop; footer date; Game Day port 8001 vs 8000 in `app.js`
+- ⬜ Make `Group2_NSPN_Final.zip` and test it from a new folder

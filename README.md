@@ -38,7 +38,7 @@ Home and About are plain HTML pages. Game Day is PHP and has to run through a PH
 
 ## The pages
 
-- `index.html` - Home. Welcome banner, the three sport cards, and a Latest news section with a dropdown that filters the articles by sport.
+- `index.html` - Home. The full NSPN logo, the three sport cards, and a Selected news section with a dropdown that filters the articles by sport.
 - `gameday.php` - Game Day. A sample schedule, results and player win/loss records, with a form that filters by sport.
 - `about.html` - About. A project introduction plus beginner guides, short histories and official resources for each sport.
 
@@ -46,7 +46,7 @@ Home and About are plain HTML pages. Game Day is PHP and has to run through a PH
 
 - `styles.css` - One stylesheet for all three pages.
 - `app.js` - The news filter on the Home page.
-- `images/` - Banner and the three sport illustrations.
+- `images/` - The NSPN logos, sport photos and the original SVG artwork.
 - `logos/` - The site logo and mascot artwork.
 - `NOTES.md` - What we changed and why, in short form.
 - `PROJECT_README.txt` - Setup, change summary and data/source notes.

@@ -1,1 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300"><rect width="1200" height="300" fill="#0b304a"/><text x="50%" y="50%" fill="#ffffff" font-family="Arial, sans-serif" font-size="40" text-anchor="middle" dominant-baseline="middle">Placeholder banner image</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="banner-title banner-desc">
+  <title id="banner-title">Three sports, one network</title>
+  <desc id="banner-desc">A coordinated illustration of a pickleball court and paddle, athletes on a chase tag course, and Power Slap competitors at a table.</desc>
+  <rect width="1200" height="300" fill="#0b304a"/>
+  <path d="M0 0h435l-55 300H0z" fill="#2e7d4f"/>
+  <path d="M445 0h365l-55 300H390z" fill="#b8560f"/>
+  <path d="M820 0h380v300H765z" fill="#8e1b2c"/>
+  <g stroke="#ffffff" fill="none" opacity=".2" stroke-width="3">
+    <path d="M25 36h345v224H25zM25 116h345M25 186h345M192 36v80M192 186v74"/>
+    <path d="M441 251V97h96v154M672 251V61h88v190M441 161h96M672 127h88"/>
+    <circle cx="1013" cy="144" r="124"/>
+  </g>
+  <g transform="translate(155 133) rotate(-30)">
+    <rect x="-10" y="34" width="20" height="105" rx="8" fill="#ffffff"/>
+    <path d="M-39-63Q0-78 39-63Q55-30 45 13Q34 45 0 46Q-34 45-45 13Q-55-30-39-63Z" fill="#0b304a" stroke="#ffffff" stroke-width="5"/>
+    <path d="M-29-12h58M-26 0h52" stroke="#2e7d4f" stroke-width="6"/>
+  </g>
+  <circle cx="289" cy="175" r="32" fill="#ffe371"/>
+  <g fill="#b49325"><circle cx="278" cy="163" r="5"/><circle cx="301" cy="166" r="5"/><circle cx="288" cy="181" r="5"/><circle cx="274" cy="187" r="4"/><circle cx="303" cy="188" r="4"/></g>
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+    <path d="M542 129l-15 42-37 42M527 172l31 32 4 39M537 135l-28 16-26-12M547 134l27 13 26-10"/>
+    <path d="M632 124l-17 47-17 26-32 12M615 170l38 20 29 30M628 137l-27 13-22-8M637 130l28-19 16 7"/>
+  </g>
+  <path d="M534 116l26 9-18 42-28-11zM625 113l27 10-17 42-29-10z" fill="#0b304a"/>
+  <circle cx="550" cy="101" r="16" fill="#ffffff"/>
+  <circle cx="644" cy="99" r="16" fill="#ffffff"/>
+  <g fill="none" stroke="#ffffff" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M926 175l-10 68M946 175l15 68M1081 175l-15 68M1101 175l10 68"/>
+    <path d="M913 117l-17 40 14 25M954 118l17 39h24M1066 118l-18 39h-23M1110 117l17 42-14 24"/>
+  </g>
+  <path d="M913 106q21-12 42 0l7 73h-55zM1067 106q20-12 43 0l7 73h-56z" fill="#0b304a"/>
+  <circle cx="935" cy="81" r="21" fill="#ffffff"/>
+  <circle cx="1089" cy="81" r="21" fill="#ffffff"/>
+  <path d="M977 170h69v18h-69zM987 188h48l-7 56h-34z" fill="#ffffff"/>
+  <path d="M991 170h41" stroke="#0b304a" stroke-width="4"/>
+</svg>

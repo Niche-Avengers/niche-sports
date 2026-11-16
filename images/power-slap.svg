@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360"><rect width="600" height="360" fill="#8e1b2c"/><text x="50%" y="50%" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" text-anchor="middle" dominant-baseline="middle">Power Slap photo</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320" role="img" aria-labelledby="slap-title slap-desc">
+  <title id="slap-title">Power Slap competitors</title>
+  <desc id="slap-desc">Two competitors stand opposite each other at a competition table, before a round begins.</desc>
+  <rect width="600" height="320" fill="#ece8cb"/>
+  <circle cx="300" cy="140" r="125" fill="#146b33" opacity=".09"/>
+  <path d="M0 260h600v60H0z" fill="#146b33"/>
+  <path d="M30 282h540" stroke="#ffffff" stroke-width="2" opacity=".3"/>
+  <path d="M300 40l13 27 30 4-22 21 5 29-26-14-26 14 5-29-22-21 30-4z" fill="#146b33" opacity=".45"/>
+  <g stroke="#0b3d24" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M203 174l-12 79M222 174l20 79M383 174l-16 79M402 174l13 79"/>
+    <path d="M190 112l-19 45 17 28M229 119l18 39h36M372 119l-18 39h-37M410 113l17 47-15 26"/>
+  </g>
+  <path d="M190 105q19-13 42 0l8 74h-58z" fill="#2fb50a"/>
+  <path d="M370 105q20-13 41 0l9 74h-58z" fill="#146b33"/>
+  <path d="M205 105v22h13v-22M384 105v22h13v-22" fill="#0b3d24"/>
+  <circle cx="211" cy="79" r="22" fill="#0b3d24"/>
+  <circle cx="391" cy="79" r="22" fill="#0b3d24"/>
+  <path d="M251 169h99v21h-99zM265 190h71l-10 70h-51z" fill="#0b3d24"/>
+  <path d="M251 169h99" stroke="#ffffff" stroke-width="5"/>
+  <rect x="286" y="205" width="29" height="18" rx="3" fill="#ffffff" opacity=".9"/>
+  <path d="M68 72h63M78 86h43M470 72h63M480 86h43" stroke="#146b33" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+</svg>

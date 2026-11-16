@@ -1,4 +1,5 @@
 NOTES - Niche Sports Programming and Network
+(History of the October 19 changes. For the current logos, theme, photos and Game Day dates, see PROJECT_README.txt.)
 
 What we changed
 

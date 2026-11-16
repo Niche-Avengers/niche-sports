@@ -1,6 +1,11 @@
 /* =========================================================
    styles.css: Niche Sports Programming and Network
    One stylesheet for every page (Module 4: external CSS)
+
+   Colors come from the NSPN logo:
+   black #000000, near-black green #070d08, panel green #0f1a12,
+   bag green #0b3d24, neon green #48f808, worm cream #ece8cb,
+   pickleball yellow #f2ea0c
    ========================================================= */
 
 /* ---------- Whole page (Module 4: element selector) ---------- */
@@ -9,8 +14,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;          /* rem = relative to the root font size */
   line-height: 1.6;         /* comfortable spacing between lines */
-  color: #17364a;           /* dark text on a light background = good contrast */
-  background-color: #f4f6f8;
+  color: #ece8cb;           /* light text on a dark background = good contrast */
+  background-color: #070d08;
 }
 
 /* ---------- Page container (Module 5: layout starts with the container) ---------- */
@@ -24,7 +29,7 @@ body {
 
 /* ---------- Header ---------- */
 header {
-  background-color: #0b304a;
+  background-color: #000000;
   color: #ffffff;
 }
 
@@ -32,12 +37,32 @@ header {
 .header-row {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.brand-hero {
+  background: #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+}
+
+.brand-hero img {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  margin: 0 auto;
 }
 
 h1 {
@@ -47,7 +72,9 @@ h1 {
 
 /* ---------- Nav (Module 4: descendant selector, inline-block, hover) ---------- */
 nav {
-  background-color: #12466b;
+  background-color: #0b3d24;
+  border-top: 2px solid #48f808;
+  border-bottom: 2px solid #48f808;
 }
 
 /* "nav a" = only the links inside the nav */
@@ -61,18 +88,29 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #2b6f9e;
+  background-color: #146b33;
 }
 
 /* ID selector: marks the page you're on (Module 4) */
 #current-page {
-  background-color: #2b6f9e;
+  background-color: #48f808;
+  color: #000000;
+  font-weight: bold;
 }
 
 /* ---------- Headings ---------- */
 h2 {
-  color: #0b304a;
+  color: #48f808;
   font-size: 1.5rem;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: #48f808;
+}
+
+a:hover {
+  color: #f2ea0c;
 }
 
 /* ---------- Images (Module 5: flexible sizing) ---------- */
@@ -87,8 +125,8 @@ figure {
 
 /* ---------- Welcome section (box model: padding, border, margin) ---------- */
 .welcome {
-  background-color: #ffffff;
-  border: 1px solid #c9d3db;
+  background-color: #0f1a12;
+  border: 1px solid #1f5a2c;
   border-radius: 8px;
   padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
@@ -106,108 +144,178 @@ figure {
 .sport {
   flex: 1 1 16rem;          /* grow, shrink, start around 16rem wide */
   box-sizing: border-box;
-  background-color: #ffffff;
-  border-top: 6px solid #0b304a;   /* each sport replaces this color below */
+  background-color: #0f1a12;
+  border-top: 6px solid #48f808;   /* each sport replaces this color below */
   border-radius: 8px;
   padding: 1rem;
 }
 
 .sport h3 {
   margin: 0.5rem 0;
+  color: #ffffff;
 }
 
 /* Links inside the cards */
 .sport a {
-  color: #0b304a;
+  color: #48f808;
 }
 
 .sport a:hover {
-  color: #2b6f9e;
+  color: #f2ea0c;
 }
 
 /* One accent color per sport (a second class on each card) */
 .pickleball {
-  border-top-color: #2e7d4f;
+  border-top-color: #f2ea0c;
 }
 
 .tag {
-  border-top-color: #b8560f;
+  border-top-color: #48f808;
 }
 
 .power-slap {
-  border-top-color: #8e1b2c;
+  border-top-color: #ece8cb;
 }
 
-/* ---------- Guide ---------- */
-.guide {
-  background-color: #ffffff;
-  border: 1px solid #c9d3db;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.guide h2 {
-  color: #0b304a;
-  font-size: 1.5rem;
-}
-
-/* ---------- Filter form ---------- */
-.filter-form {
-  background-color: #ffffff;
-  border: 1px solid #c9d3db;
+/* ---------- Latest news ---------- */
+.news {
+  background-color: #0f1a12;
+  border: 1px solid #1f5a2c;
   border-radius: 8px;
   padding: 1rem 1.5rem;
   margin-top: 1.5rem;
 }
-.filter-form label {
-  display: block;
-  margin-bottom: 0.5rem;
+
+.news label {
+  margin-right: 0.5rem;
 }
-.filter-form select {
+
+.news select {
   font-size: 1rem;
   padding: 0.3rem;
+  background-color: #070d08;
+  color: #ece8cb;
+  border: 1px solid #48f808;
+  border-radius: 4px;
 }
 
-/* ---------- News note ---------- */
-.news-fallback {
-  color: #5a6b78;
+#news-list a {
+  color: #48f808;
+}
+
+#news-list a:hover {
+  color: #f2ea0c;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #000000;
+  color: #ece8cb;
+  border-top: 2px solid #48f808;
+  margin-top: 2rem;
   font-size: 0.9rem;
-  margin: 0.5rem 0;
-}
-
-/* ---------- Table wrappers ---------- */
-.table-wrap {
-  background-color: #ffffff;
-  border: 1px solid #c9d3db;
-  border-radius: 8px;
-  padding: 1rem;
-  overflow-x: auto;
-  margin-top: 1.5rem;
-}
-.data-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.data-table th,
-.data-table td {
-  border: 1px solid #dee2e6;
-  padding: 0.5rem;
-  text-align: left;
-}
-.data-table th {
-  background-color: #0b304a;
-  color: #ffffff;
-}
-.data-table td {
-  background-color: #f8f9fa;
-}
-
-/* ---------- Focus outline ---------- */
-*:focus-visible {
-  outline: 3px solid #2b6f9e;
-  outline-offset: 2px;
 }
 
 footer p {
   margin: 0.3rem 0;
+}
+
+/* ---------- Keyboard navigation ---------- */
+a:focus-visible,
+select:focus-visible,
+button:focus-visible,
+.table-wrap:focus-visible {
+  outline: 3px solid #f2ea0c;
+  outline-offset: 3px;
+}
+
+/* ---------- About and Game Day ---------- */
+.guide {
+  background-color: #0f1a12;
+  border: 1px solid #1f5a2c;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Second photo inside each About guide */
+.guide-photo {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.filter-form select,
+.filter-form button {
+  font: inherit;
+  padding: 0.4rem 0.75rem;
+  max-width: 100%;
+}
+
+.filter-form select {
+  background-color: #070d08;
+  color: #ece8cb;
+  border: 1px solid #48f808;
+  border-radius: 4px;
+}
+
+.filter-form button {
+  background-color: #48f808;
+  color: #000000;
+  font-weight: bold;
+  border: 1px solid #48f808;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-form button:hover {
+  background-color: #f2ea0c;
+  border-color: #f2ea0c;
+}
+
+/* Keep wide data tables inside the page on phones. */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #1f5a2c;
+  padding: 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table thead {
+  background-color: #0b3d24;
+  color: #ffffff;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #16261a;
+}
+
+.notice {
+  color: #f2ea0c;
+  font-weight: bold;
 }

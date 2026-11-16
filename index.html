@@ -13,15 +13,15 @@
 </head>
 <body>
 
-  <!-- HEADER: copied onto every page (Module 3/5 semantic tags) -->
+  <!-- HEADER: the same branding appears on all three pages -->
   <header>
     <div class="page header-row">
-      <img src="logos/logo.svg" alt="Niche Sports Programming and Network logo" class="logo">
+      <img src="images/nspn-worm-logo.png" alt="NSPN neon green logo with worm mascot" class="logo" width="2048" height="768">
       <h1>Niche Sports Programming and Network</h1>
     </div>
   </header>
 
-  <!-- NAV: copied onto every page. Game Day and About don't exist yet. -->
+  <!-- NAV: links to all three project pages -->
   <nav aria-label="Main navigation">
     <div class="page">
       <a href="index.html" id="current-page" aria-current="page">Home</a>
@@ -35,8 +35,8 @@
 
     <!-- WELCOME -->
     <section class="welcome">
-      <figure>
-        <img src="images/banner.svg" alt="Placeholder banner image">
+      <figure class="brand-hero">
+        <img src="images/nspn-worms-collide.png" alt="NSPN neon green logo with worm mascots playing rugby, chase tag and pickleball above the words Niche Sports Programming and Network" width="1583" height="851">
       </figure>
       <h2>Your home for niche sports</h2>
       <p>
@@ -51,40 +51,41 @@
 
       <!-- One class (.sport) styles all three cards; one extra class sets each accent color -->
       <section class="sport pickleball">
-        <img src="images/pickleball.svg" alt="Pickleball illustration">
+        <img src="images/pickleball.jpg" alt="Pickleball player in an orange jersey raising a fist toward a cheering crowd">
         <h3>Pickleball</h3>
         <p>
           A paddle sport that mixes tennis, badminton and ping-pong.
           It is played on a small court, in singles or doubles.
         </p>
-        <a href="https://www.ppatour.com" target="_blank">Where to watch: PPA Tour</a>
+        <a href="https://www.ppatour.com" target="_blank" rel="noopener noreferrer">Where to watch: PPA Tour</a>
       </section>
 
       <section class="sport tag">
-        <img src="images/tag.svg" alt="Tag illustration">
+        <img src="images/tag.jpg" alt="Two World Chase Tag athletes facing off across the rails of an obstacle course">
         <h3>Tag</h3>
         <p>
           The playground game turned pro. One chaser, one evader,
           and a short time limit on an obstacle course.
         </p>
-        <a href="https://www.worldchasetag.com" target="_blank">Where to watch: World Chase Tag</a>
+        <a href="https://www.worldchasetag.com" target="_blank" rel="noopener noreferrer">Where to watch: World Chase Tag</a>
       </section>
 
       <section class="sport power-slap">
-        <img src="images/power-slap.svg" alt="Power Slap illustration">
+        <img src="images/power-slap.jpg" alt="Power Slap competitor in a blue jersey striking an opponent across the face at the competition table">
         <h3>Power Slap</h3>
         <p>
           A striking competition where two athletes take turns
           slapping each other, with judges scoring each match.
         </p>
-        <a href="https://www.powerslap.com" target="_blank">Where to watch: Power Slap</a>
+        <a href="https://www.powerslap.com" target="_blank" rel="noopener noreferrer">Where to watch: Power Slap</a>
       </section>
 
     </div>
 
     <!-- LATEST NEWS: the one JavaScript interaction (Modules 6 and 7) -->
     <section class="news">
-      <h2>Latest news</h2>
+      <h2>Selected news</h2>
+      <p>Articles from the official sport organizations. These articles are manually selected and do not update automatically. Links checked October 14, 2026.</p>
 
       <!-- Module 5: the label's "for" matches the select's id -->
       <label for="sport-choice">Show news for:</label>
@@ -95,13 +96,14 @@
         <option value="power-slap">Power Slap</option>
       </select>
 
-      <!-- Module 6: noscript shows a message when JavaScript is disabled -->
-      <noscript>
-        <p class="news-fallback">News is loaded with JavaScript. Please enable JavaScript to see our latest articles.</p>
-      </noscript>
-      <p class="news-fallback">Note: these articles are manually selected and do not update automatically.</p>
-      <p id="news-count"></p>
+      <!-- app.js writes a message here and fills in the list -->
+      <p id="news-count" role="status" aria-live="polite"></p>
       <ul id="news-list"></ul>
+      <noscript>
+        <p>For news, visit <a href="https://www.ppatour.com/news/">PPA Tour</a>,
+          <a href="https://www.worldchasetag.com/news">World Chase Tag</a>, or
+          <a href="https://www.powerslap.com/news/">Power Slap</a>.</p>
+      </noscript>
     </section>
 
   </main>

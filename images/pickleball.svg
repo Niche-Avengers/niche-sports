@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360"><rect width="600" height="360" fill="#2e7d4f"/><text x="50%" y="50%" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" text-anchor="middle" dominant-baseline="middle">Pickleball photo</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320" role="img" aria-labelledby="pickleball-title pickleball-desc">
+  <title id="pickleball-title">Pickleball court and equipment</title>
+  <desc id="pickleball-desc">A navy paddle and yellow perforated ball in front of a green pickleball court and net.</desc>
+  <rect width="600" height="320" fill="#ece8cb"/>
+  <circle cx="545" cy="42" r="88" fill="#2fb50a" opacity=".1"/>
+  <rect x="35" y="34" width="530" height="252" rx="8" fill="#2fb50a"/>
+  <rect x="62" y="55" width="476" height="208" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <path d="M62 112h476M62 206h476M300 55v57M300 206v57" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <path d="M46 155h508v14H46z" fill="#0b3d24" opacity=".65"/>
+  <path d="M46 155h508M46 144v43M554 144v43" stroke="#ffffff" stroke-width="5"/>
+  <g transform="translate(185 166) rotate(-30)">
+    <rect x="-10" y="36" width="20" height="96" rx="8" fill="#0b3d24"/>
+    <path d="M-40-54Q0-70 40-54Q57-26 45 20Q36 50 0 51Q-36 50-45 20Q-57-26-40-54Z" fill="#ece8cb" stroke="#0b3d24" stroke-width="7"/>
+    <path d="M-32-39Q0-52 32-39L33 17Q25 37 0 38Q-25 37-33 17Z" fill="#0b3d24"/>
+    <path d="M-28-9h56M-25 2h50" stroke="#2fb50a" stroke-width="5"/>
+    <path d="M-9 74h18M-9 86h18M-9 98h18M-9 110h18" stroke="#ffffff" stroke-width="2" opacity=".65"/>
+  </g>
+  <circle cx="427" cy="230" r="45" fill="#f2ea0c" stroke="#0b3d24" stroke-width="4"/>
+  <g fill="#9a9200">
+    <ellipse cx="405" cy="208" rx="6" ry="8" transform="rotate(30 405 208)"/>
+    <ellipse cx="435" cy="200" rx="7" ry="5"/>
+    <circle cx="425" cy="225" r="7"/>
+    <ellipse cx="451" cy="226" rx="5" ry="8"/>
+    <ellipse cx="406" cy="241" rx="6" ry="8" transform="rotate(-30 406 241)"/>
+    <ellipse cx="432" cy="255" rx="8" ry="5"/>
+  </g>
+</svg>

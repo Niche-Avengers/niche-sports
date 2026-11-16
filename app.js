@@ -8,15 +8,14 @@ console.log("app.js loaded");
 
 // ---------- The data (Module 7: an array of objects) ----------
 // Each headline is one object with three properties.
-// NOTE: These are manually maintained and NOT updated automatically.
-// For presentation: explain that this is static demonstration data.
+// Manually selected official articles. Update these links as new stories appear.
 const headlines = [
-  { sport: "pickleball", title: "Championship Sunday Standout Stats from the Veolia Chicago Cup", url: "https://www.ppatour.com/veolia-chicago-cup-storylines" },
-  { sport: "pickleball", title: "Veolia Chicago Cup | Carvana PPA Tour", url: "https://ppatour.com/tournament/2026/veolia-chicago-cup" },
-  { sport: "tag", title: "WCT8 Season Is Here", url: "https://www.worldchasetag.com/news/wct8-season-is-here" },
-  { sport: "tag", title: "WCT8 National Championship Cup", url: "https://www.worldchasetag.com/wct8-national-championships---team-registration" },
-  { sport: "power-slap", title: "Power Slap 24: Muniz vs Hintz Official Results", url: "https://powerslap.com/news/power-slap-24-muniz-vs-hintz-official-results" },
-  { sport: "power-slap", title: "Power Slap 24 Full Fight Card", url: "https://powerslap.com/news/power-slap-24-full-fight-card-coin-toss-winners" }
+  { sport: "pickleball", title: "PPA Tour: Championship Sunday stats from the Veolia Chicago Cup", url: "https://www.ppatour.com/championship-sunday-standout-stats-from-the-veolia-chicago-cup/" },
+  { sport: "pickleball", title: "PPA Tour: Storylines for the Veolia Chicago Cup", url: "https://www.ppatour.com/veolia-chicago-cup-storylines/" },
+  { sport: "tag", title: "World Chase Tag: WCT8 season preview", url: "https://www.worldchasetag.com/news/wct8-season-is-here" },
+  { sport: "tag", title: "World Chase Tag: WCT7 World Championship recap", url: "https://www.worldchasetag.com/news/wct7-worlds-recap-morocco-and-france-on-top-of-the-world" },
+  { sport: "power-slap", title: "Power Slap 24: Muniz vs. Hintz official results", url: "https://www.powerslap.com/news/power-slap-24-muniz-vs-hintz-official-results/" },
+  { sport: "power-slap", title: "Power Slap 25: Louis Robinson and Jujhar Singh matchup announced", url: "https://www.powerslap.com/news/louis-robinson-and-jujhar-singh-set-for-heavyweight-showdown-at-power-slap-25-in-abu-dhabi/" }
 ];
 
 // ---------- Find the elements (Module 6: querySelector) ----------
@@ -52,6 +51,7 @@ function showNews() {
     link.textContent = h.title;   // plain text, never HTML
     link.href = h.url;            // where the link goes
     link.target = "_blank";       // open outside sites in a new tab
+    link.rel = "noopener noreferrer";
 
     item.append(link);
     newsList.append(item);
@@ -63,7 +63,15 @@ function showNews() {
 
 // ---------- Run showNews whenever the dropdown changes (Module 6: events) ----------
 // Pass the function name (showNews), not showNews(), so it runs on each change.
-sportChoice.addEventListener("change", showNews);
+if (sportChoice && newsList && newsCount) {
+  sportChoice.addEventListener("change", showNews);
+  // Fill the list once when the page first loads
+  showNews();
+}
 
-// Fill the list once when the page first loads
-showNews();
+// ---------- Game Day link when a page is opened as a plain file ----------
+// Game Day needs PHP, and PHP only runs through the local server.
+const gameDayLink = document.querySelector('nav a[href="gameday.php"]');
+if (gameDayLink && window.location.protocol === "file:") {
+  gameDayLink.href = "http://localhost:8001/gameday.php";
+}

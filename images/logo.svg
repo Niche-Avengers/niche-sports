@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><rect width="80" height="80" fill="#2b6f9e"/><text x="50%" y="50%" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle">NSPN</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">NSPN logo</title>
+  <desc id="logo-desc">Navy network badge with green, orange and red stripes for the three sports.</desc>
+  <rect width="80" height="80" rx="12" fill="#0b304a"/>
+  <circle cx="40" cy="33" r="23" fill="none" stroke="#ffffff" stroke-width="2" opacity=".4"/>
+  <path d="M21 20h11v8H21z" fill="#2e7d4f"/>
+  <path d="M35 20h11v8H35z" fill="#b8560f"/>
+  <path d="M49 20h11v8H49z" fill="#8e1b2c"/>
+  <text x="40" y="48" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">NSPN</text>
+  <path d="M22 65h36" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>

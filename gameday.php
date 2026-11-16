@@ -38,7 +38,7 @@ $matchTemplates = [
 
 $matches = [];
 foreach ($matchTemplates as $template) {
-    $matchDate = $today->modify('+' . $template['offset'] . ' days');
+    $matchDate = $today->modify($template['offset'] . ' days');
     $status = 'Upcoming';
     $result = '';
 
@@ -80,7 +80,7 @@ $players = [
 <body>
   <header>
     <div class="page header-row">
-      <img src="logos/logo.svg" alt="Niche Sports Programming and Network logo" class="logo">
+      <img src="images/nspn-worm-logo.png" alt="NSPN neon green logo with worm mascot" class="logo" width="2048" height="768">
       <h1>Niche Sports Programming and Network</h1>
     </div>
   </header>

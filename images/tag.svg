@@ -1,1 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360"><rect width="600" height="360" fill="#b8560f"/><text x="50%" y="50%" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" text-anchor="middle" dominant-baseline="middle">Tag photo</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320" role="img" aria-labelledby="tag-title tag-desc">
+  <title id="tag-title">Chase tag obstacle course</title>
+  <desc id="tag-desc">Two athletes run between rails and platforms in a chase tag arena.</desc>
+  <rect width="600" height="320" fill="#ece8cb"/>
+  <path d="M0 240h600v80H0z" fill="#48f808"/>
+  <path d="M0 265h600M55 320l78-80M360 320l45-80" stroke="#ffffff" stroke-width="2" opacity=".25"/>
+  <circle cx="511" cy="50" r="84" fill="#48f808" opacity=".09"/>
+  <g stroke="#0b3d24" stroke-width="8" stroke-linejoin="round" fill="none">
+    <path d="M39 240V122h128v118M39 176h128"/>
+    <path d="M234 240v-62h96v62"/>
+    <path d="M426 240V99h130v141M426 151h130"/>
+  </g>
+  <path d="M228 174h108v13H228z" fill="#0b3d24"/>
+  <path d="M414 94h154v14H414z" fill="#0b3d24"/>
+  <g stroke="#0b3d24" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M186 130l-22 54-44 26M164 184l40 23 11 44"/>
+    <path d="M178 139l-30 17-25-12M188 135l29 14 30-11"/>
+  </g>
+  <path d="M178 119l26 9-18 45-31-11z" fill="#2fb50a"/>
+  <circle cx="196" cy="105" r="16" fill="#0b3d24"/>
+  <g stroke="#0b3d24" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M367 130l-18 45-20 34-29 10M349 174l45 20 30 32"/>
+    <path d="M361 143l-28 11-29-9M371 137l27-19 18 7"/>
+  </g>
+  <path d="M361 121l26 11-17 43-29-11z" fill="#48f808"/>
+  <circle cx="378" cy="107" r="16" fill="#0b3d24"/>
+  <path d="M69 93h40M65 106h30M470 201h35" stroke="#48f808" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+</svg>

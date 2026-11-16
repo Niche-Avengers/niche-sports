@@ -1,10 +1,5 @@
 Niche Sports Programming and Network - Group 2
-Updated October 2026
-
-GET THE CODE FROM GITHUB
-1. Open VS Code.
-2. Clone the repository: git clone https://github.com/Niche-Avengers/niche-sports.git
-3. Open the cloned niche-sports folder in VS Code.
+Updated October 14, 2026
 
 RUN THE WEBSITE
 1. Extract the complete niche-sports folder and open it in VS Code.
@@ -39,23 +34,23 @@ GAME DAY DATA
 Every fixture, date, athlete name, result and record is fictional sample data.
 Records describe only the completed sample fixtures, not real athletes or live statistics.
 The GET form filters the view; it does not save submissions.
-Edit the $matches and $players arrays in gameday.php to maintain demonstration data.
-If results change, update player records too. Status is set manually in the array.
+Edit the $matchTemplates and $players arrays in gameday.php to maintain demonstration data.
+If results change, update player records too. Dates and Completed/Today/Upcoming status are generated from each fixture's day offset relative to the current day.
 
 NEWS AND GUIDE SOURCES
-News links are manually selected and were checked October 2026.
+News links are manually selected and were checked October 14, 2026.
 They do not update automatically. Edit the headlines array in app.js for new articles.
-All SVG artwork is original vector illustration; no outside images are required.
+The sport card photos are third-party images supplied by the group; see the November 9 update below.
 
 Pickleball news:
-https://www.ppatour.com/veolia-chicago-cup-storylines
-https://ppatour.com/tournament/2026/veolia-chicago-cup
+https://www.ppatour.com/championship-sunday-standout-stats-from-the-veolia-chicago-cup/
+https://www.ppatour.com/veolia-chicago-cup-storylines/
 World Chase Tag news:
 https://www.worldchasetag.com/news/wct8-season-is-here
-https://www.worldchasetag.com/wct8-national-championships---team-registration
+https://www.worldchasetag.com/news/wct7-worlds-recap-morocco-and-france-on-top-of-the-world
 Power Slap news:
-https://powerslap.com/news/power-slap-24-muniz-vs-hintz-official-results
-https://powerslap.com/news/power-slap-24-full-fight-card-coin-toss-winners
+https://www.powerslap.com/news/power-slap-24-muniz-vs-hintz-official-results/
+https://www.powerslap.com/news/louis-robinson-and-jujhar-singh-set-for-heavyweight-showdown-at-power-slap-25-in-abu-dhabi/
 
 Beginner/history sources:
 https://www.ppatour.com/about/what-is-pickleball/
@@ -81,3 +76,19 @@ Run the checks above before presenting the PHP page in class.
 LATER PHASE
 Live data, automated collection, a database and the club/event map remain future work.
 The supplied class demonstration files and group proposal were not modified.
+
+NOVEMBER 4 LOGO UPDATE
+- Every page now uses images/nspn-worm-logo.png in its header.
+- Home displays images/nspn-worm-crest.png in a responsive hero.
+- Existing generated artwork was reused without redrawing or cropping.
+- PNG dimensions preserve logo proportions; sports cards retain SVG illustrations.
+- PHP and JavaScript behavior is unchanged. RUNIT is artwork only, not a new sport section.
+
+NOVEMBER 9 THEME UPDATE
+- styles.css now uses the logo palette: black, neon green, bag green, worm cream and pickleball yellow.
+- Home displays images/nspn-worms-collide.png, trimmed of its empty transparent margin, in place of the crest.
+- The three sport SVG illustrations were recolored to match the logo.
+- Sport cards on Home now use photos: images/pickleball.jpg, images/tag.jpg and images/power-slap.jpg.
+- About shows images/pickleball-2.jpg, images/tag-2.jpg (also danidevaux.com) and images/power-slap-2.jpg.
+- The photos were supplied for this class project and belong to their owners. The Tag photo is by danidevaux.com (watermark kept).
+  Confirm permission for each photo before publishing the site.
